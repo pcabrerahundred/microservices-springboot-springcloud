@@ -39,10 +39,23 @@ logging:
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
 
-
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8099/eureka/
+
+Feign:
+  hystrix:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "*"
 
 spring.jpa.defer-datasource-initialization: true

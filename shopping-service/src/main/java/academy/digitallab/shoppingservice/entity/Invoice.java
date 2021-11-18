@@ -39,8 +39,8 @@ public class Invoice {
 
     private String state;
 
-    //@Transient
-    //private Customer customer;
+    @Transient
+    private Customer customer;
 
     public Invoice(){
         items = new ArrayList<>();
